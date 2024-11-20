@@ -1,27 +1,50 @@
-# App1
+### Lista de projetos
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.2.2.
+#### Ref.
+https://www.youtube.com/watch?v=61QSKu2u5GU&t=1s
 
-## Development server
+* Canal: Crislaine D'Paula
+* Projeto: Projeto Completo | Angular 18 e JsonServer | Lista de tarefas
+```
+https://www.youtube.com/watch?v=61QSKu2u5GU
+```
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+* criando projeto
+ng new ListaDeTarefasAngular
 
-## Code scaffolding
+* criando componets
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+* ng g c components/header
+* ng g c components/tasks
+* ng g c components/task-item
 
-## Build
+* ng g s services/tasks
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+#### Backend
+* criar o arquivo
+* db.json
 
-## Running unit tests
+* db.json conteúdo
+{
+    "tasks": [
+        {
+            "id": "1",
+            "tarefa": "Task 1",
+            "categoria": "This is the first task.",
+            "concluido": false
+        },
+        {
+            "id": "2",
+            "tarefa": "Task 2",
+            "categoria": "This is the first task 2.",
+            "concluido": true
+        }
+    ]
+}
+npm i json-server
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+http://localhost:3000/tasks
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+#### rodando o projeto
+npx json-server db.json
+npm start
